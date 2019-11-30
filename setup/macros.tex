@@ -1,0 +1,43 @@
+\addto\captionsenglish{
+	\renewcommand{\contentsname}
+	{Table of Contents}
+}
+\newcommand{\additemtotoc}[1]{\textbf{#1}\addcontentsline{toc}{subsubsection}{\thesubsection.\arabic{enumi} {#1}}}
+\renewcommand{\cftdot}{}
+\addtocontents{toc}{\cftpagenumbersoff{section}}
+%\addtocontents{toc}{\cftpagenumbersoff{subsection}}
+%\addtocontents{toc}{\cftpagenumbersoff{subsubsection}}
+
+\renewcommand{\labelenumi}{\thesubsection.\arabic{enumi}}
+\renewcommand{\labelenumii}{\alph{enumii}.}
+\renewcommand{\labelenumiii}{\thesection.\arabic{enumi}.\arabic{enumii}}
+
+\renewcommand\theenumi{\thesubsection.\arabic{enumi}}%% references with subsection numbering
+
+\newcommand{\example}[2][def]{
+	\ifthenelse{\equal{#1}{def}}
+	{\textit{\color{black}Example: #2}}
+	{\textit{\color{black}Example~#1: #2}}
+}
+
+\newcommand{\card}[1]{\textsc{\color{OliveGreen}#1}}
+\newcommand{\credit}{[c]}
+\newcommand{\click}{[click]}
+\newcommand{\recurring}{[recurring]}
+\newcommand{\link}{[link]}
+\newcommand{\MU}{[MU]}
+\newcommand{\sub}{[sub]}
+\newcommand{\trash}{[trash]}
+
+\newcommand{\mrule}[1]{\item #1 \label[rule]{mrule:\labelenumi-\labelenumii}}
+\newcommand{\mstep}[1]{\item #1 \label[step]{mstep:\labelenumi}}
+\newcommand{\msection}[1]{\item #1 \label[sec]{msec:\labelenumi}}
+
+\makeatletter
+\renewcommand*{\p@subsection}{\thesection.}
+\makeatother
+
+\crefname{rule}{rule}{Rules}
+\crefname{step}{step}{Rules}
+\crefname{sec}{section}{Sections}
+\crefdefaultlabelformat{#1#2#3}

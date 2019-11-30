@@ -1,0 +1,23 @@
+\input{setup/preamble.tex}% package inclusion and set up of the document
+\input{setup/hyphenations.tex}
+\input{setup/macros.tex}% my new macros
+\hyphenpenalty=100
+\begin{document}
+
+\pagestyle{empty} %disable headers and footers
+\pagenumbering{roman} %use roman page numbering in the frontmatter
+\input{sections/title_page.tex}
+\clearpage
+%\pdfbookmark[0]{Contents}{label:contents}
+\pagestyle{fancy} %enable headers and footers again
+%\cfoot[<even output>]{<odd output>}
+\clearpage
+\begin{multicols}{2}
+	\tableofcontents
+	\columnbreak
+	~
+\end{multicols}
+\clearpage
+\pagenumbering{arabic} %use arabic page numbering in the mainmatter
+\input{sections/game_concepts.tex}
+\end{document}
