@@ -16,7 +16,7 @@
 	      \example{During a run, Lockdown's subroutine fires, preventing the Runner from drawing cards for the remainder of the turn. The Runner has a \card{Diesel} and a \card{Process Automation} in their grip. For the remainder of this turn, they cannot play Diesel as its entire ability is prohibited, but they can play \card{Process Automation}. Even though cards cannot be drawn through \card{Process Automation}, the Runner can play it to gain 2\credit.}
 	\item If an instruction includes the words ``if able,'' it can only be carried out fully or not at all. If any part of the instruction is not possible to carry out, the entire instruction is ignored.
 	\item If an instruction does not include the words ``if able,'' as much of that instruction as possible is carried out. Any parts of the instruction that are not possible to carry out are ignored.
-	\item A player can only take an action or use an ability if its effect has the potential to change the game state. This potential is assessed strictly by what the action or ability will have the ability to accomplish, without regard to the consequences of paying any costs to initiate that action or ability and without regard to any other abilities that may be triggered by initiating or resolving that action or ability.\\[10pt]
+	\item A player can only take an action or use an ability if its effect has the potential to change the game state. This potential is assessed strictly by what the action or ability will have the ability \textcolor{Bittersweet}{ can be	expected to} accomplish, without regard to the consequences of paying any costs to initiate that action or ability and without regard to any other abilities that may \textcolor{Bittersweet}{ meet their conditions in the process of} initiating or resolving that action or ability.\\[10pt]
 	      \example[1]{The Corp has one unrezzed piece of ice installed and \card{Liquidation} in HQ. As \card{Liquidation} requires the Corp to have at least one rezzed card to trash, the Corp cannot play \card{Liquidation} as it cannot change the game state.}\\[10pt]
 	      \example[2]{The Corp has one rezzed piece of ice installed and \card{Liquidation} in HQ. Because the Corp has at least one rezzed card that could be trashed (which would change the game state), they can play \card{Liquidation}, spending a click and paying its play cost. The Corp then chooses any number of their rezzed cards to trash, which could be zero cards.}\\[10pt]
 	      \example[3]{The Runner is playing \card{Armand ``Geist'' Walker} and has \card{Forger} installed. The Runner can only trash \card{Forger} and trigger Geist's ability when they are about to take a tag (which Forger could avoid) or while they have a tag (which Forger could remove). Using \card{Forger} at any other time has no potential to change the game state.}
@@ -33,6 +33,7 @@
 	\item The symbol \sub (plaintext: \sub) stands for ``subroutine''. Each symbol marks a single subroutine on a piece of ice. See \hyperlink{page.i}{rule 3.4.7} for information about subroutines.
 	\item The symbol \trash (plaintext: \trash) stands for ``trash this card''. It is used as a self-referential cost in card text, such as ``\trash: Draw 2 cards,'' which means ``Trash this
 	      card to draw 2 cards.'' See \hyperlink{page.i}{section 1.15} for rules about costs, and \hyperlink{page.i}{section 1.18} for rules about trashing cards.
+	\item \textcolor{Bittersweet}{The symbol [interrupt] (plaintext: [interrupt]) stands for ``interrupt timing''. It is used to designate abilities that resolve immediately before other abilities. See section 9.8 for rules about interrupt abilities.}
 \end{enumerate}
 \subsection{Deck Construction}
 \begin{enumerate}
@@ -64,15 +65,15 @@
 \subsection{Extra Cards}
 \begin{enumerate}
 	\item Some abilities allow for the use of additional cards from outside the deck.
-	\item One Corp identity, \card{Jinteki Biotech: Life Imagined}, has the ability, ``Before taking your first turn, you may swap this card with any copy of Jinteki Biotech.'' There are 3 versions of this identity, which have different abilities on their reverse side.
+	\item One Corp identity, \card{Jinteki Biotech: Life Imagined}, has the ability, ``Before taking your first turn, you may \textcolor{Bittersweet}{switch} this card with any copy of Jinteki Biotech.'' There are 3 versions of this identity, which have different abilities on their reverse side.
 	      \begin{enumerate}
-		      \item A player using Jinteki Biotech as their identity may bring any number of copies of that identity along with their deck. After completing game setup, that player may choose any copy they own to be their active identity for the duration of the game. All other copies are placed outside the game.
+		      \item A player \textcolor{Bittersweet}{playing} Jinteki Biotech as their identity may bring any number of copies of that identity along with their deck. After completing game setup, that player may choose any copy they own to be their active identity for the duration of the game. All other copies are placed outside the game.
 	      \end{enumerate}
 	\item One Runner identity, \card{Adam: Compulsive Hacker}, has the ability, ``You start the game with 3 different directive cards installed (these cards are not considered part of your deck).''
 	      \begin{enumerate}
-		      \item A player using Adam as their identity must bring at least 3 differently named cards with the directive subtype along with their deck. The player may bring any number of directive cards over the required 3.
-		      \item After players reveal their identities, the player using Adam selects exactly 3 of their provided directive cards. Those cards begin the game installed in the play area. All other directives the player brought this way remain outside the game.
-		      \item A player using Adam can also include directive cards in their deck. The cards chosen to be installed at the beginning of the game do not impact the deck's influence requirements or the maximum allowed number of copies of those cards.
+		      \item A player \textcolor{Bittersweet}{playing} Adam as their identity must bring at least 3 differently named cards with the directive subtype along with their deck. The player may bring any number of directive cards over the required 3.
+		      \item After players reveal their identities, the player \textcolor{Bittersweet}{playing} Adam selects exactly 3 of their provided directive cards. Those cards begin the game installed in the play area. All other directives the player brought this way remain outside the game.
+		      \item A player \textcolor{Bittersweet}{playing} Adam can also include directive cards in their deck. The cards chosen to be installed at the beginning of the game do not impact the deck's influence requirements or the maximum allowed number of copies of those cards.
 		      \item Once the game has begun, the cards installed this way are treated exactly as any other installed cards. Abilities that move these cards to other zones function normally, including shuffling them into the stack.
 	      \end{enumerate}
 	\item Two cards, \card{Rebirth} and \card{DJ Fenris}, make use of identity cards other than the one selected by the player during deck construction.
@@ -81,6 +82,7 @@
 		      \item When an ability refers to an identity other than the Runner's current identity, it refers to the cards provided this way. If an identity card leaves the play area, it must be
 		            returned to the pile outside the game.
 		      \item In a tournament, all identities brought to the game this way must be legal for players to use as their actual identity in that tournament.
+		      \item \textcolor{Bittersweet}{One Runner identity, Hoshiko Shiro, is double-sided (see section 3.1). If the Runner switches their identity with Hoshiko, it enters play with the front side faceup. If the Runner switches Hoshiko with another identity, the new identity enters play faceup regardless of Hoshiko’s current status.}
 	      \end{enumerate}
 \end{enumerate}
 \clearpage
@@ -89,6 +91,7 @@
 	\item The players decide who will play as the Corp and who will play as the Runner. Each player places an appropriate identity card for the side they are to play faceup in the play area, then supplies a corresponding deck, placing it facedown in the play area, and any appropriate extra cards.
 	      \begin{enumerate}
 		      \item Some identity cards have abilities that affect setup. Even though cards are not active until the game begins, these identities still alter setup at the appropriate step as indicated by their text.
+		      \item \textcolor{Bittersweet}{Some identities are double-sided (see section 3.1). If a player is playing a double-sided identity, it begins the game with the front side faceup.}
 	      \end{enumerate}
 	\item If a player's identity has an ability that affects setup or the start of the game, and that ability does not directly correspond to a setup step outlined in this section of the rules, that player makes any necessary decisions and changes for their identity's special setup or start of game abilities at this time. If both players have setup or start of game abilities at this time, the Corp resolves theirs first.
 	\item The players create the bank by gathering all types of tokens described in \hyperlink{page.i}{section 1.9}.
@@ -107,7 +110,7 @@
 \begin{enumerate}
 	\item The game ends when a player meets one of their win conditions.
 	      \begin{enumerate}
-		      \item If both players would simultaneously satisfy their win conditions, the game ends in a	draw.
+		      \item If both players would simultaneously satisfy their win conditions, the game ends in a draw.
 	      \end{enumerate}
 	\item Each player has two possible win conditions available.
 	      \begin{enumerate}
@@ -128,9 +131,13 @@
 	      \end{enumerate}
 	\item Cards that are INACTIVE are unable to affect the game or have most of their abilities	used.
 	      \begin{enumerate}
-		      \item Cards are inactive in R\&D, HQ, Archives, the heap, the grip, the stack, and the Runner's score area, and while removed from the game. Cards installed facedown are also inactive.
+		      \item Cards are inactive in R\&D, HQ, Archives, the heap, the grip, the stack, and the Runner's score area, \textcolor{Bittersweet}{while set aside,} and while removed from the game. Cards installed facedown are also inactive.
 		      \item Inactive cards in most zones retain their printed characteristics (name, card type, faction, cost, subtypes, influence, etc). Runner cards installed facedown have no characteristics.
 	      \end{enumerate}
+	\item \textcolor{Bittersweet}{For a player to DRAW 1 or more cards is to take that many cards from the top of their deck and put them into their hand. See section 4.3 and section 4.4 for information about decks and hands.}
+	\begin{enumerate}
+		\item If a replacement effect modifies the act of adding a card to a player’s hand,	and that replacement effect is applied to a card being drawn, the card still counts as drawn.
+	\end{enumerate}
 	\item Most abilities are active if and only if the card they appear on is active. \hyperlink{page.i}{Rule 9.1.6} details the cases where abilities on inactive cards are still active.
 	\item Abilities can convert cards from one type into another type, or even from a card into a counter. \hyperlink{page.i}{Rules 10.1.3} and \hyperlink{page.i}{10.1.4} explain the details of card conversion.
 \end{enumerate}
@@ -140,8 +147,8 @@
 	      \begin{enumerate}
 		      \item The terms ``counter'' and ``token'' are interchangeable.
 	      \end{enumerate}
-	\item The BANK is the supply of tokens not yet in play. Tokens in the bank are available to both players to take and use as dictated by the game rules and card abilities. Players do not control tokens in the bank and cannot spend them. The bank is an unlimited supply; running out of game pieces to track a type of token does not prohibit a player from taking or using additional tokens of that type.
-	\item Some abilities can convert a card into a counter. A counter put into play in this way is tracked using the card as a game piece. See \hyperlink{page.i}{rule 10.1.4}.
+	\item The BANK is the supply of tokens not yet in play. Tokens in the bank are available to both players to take and use as dictated by the game rules and card abilities. Players do not control tokens in the bank and cannot spend them. The bank is an unlimited supply; running out of game pieces to track a type of token does not prohibit a player from \textcolor{Bittersweet}{gaining tokens of that type or placing them on cards}.
+	\item Some abilities can convert a card into a counter. A counter put into play in this way is tracked \textcolor{Bittersweet}{with} the card \textcolor{Bittersweet}{acting} as a game piece. See \hyperlink{page.i}{rule 10.1.4}.
 	\item Some abilities can cause a player or card to have or be ``considered to have'' one or more tokens or additional tokens without placing or giving those tokens. A token considered to exist in this way conveys all the same information and effects as a token of the specified type would, except that it cannot be moved or removed from the card or player it belongs to, nor can it be spent to pay a cost.
 	\item There are ten types of tokens: credit tokens, click tokens, tag tokens, bad publicity tokens, brain damage tokens, advancement tokens, virus counters, power counters, agenda counters, and condition counters.
 	      \begin{enumerate}
@@ -168,23 +175,23 @@ Each of the Corp's credits represents enough money to manufacture a run of compu
 		      \item A player GAINS credits whenever credits enter their credit pool from any location.
 		      \item If a player is instructed to LOSE credits, that player is forced to move the specified number of credits from their credit pool to the bank. Players cannot lose credits from cards.\\[10pt]
 		            \example{If a subroutine on \card{DNA Tracker} resolves, the Runner must lose 2\credit~from their credit pool, or 1\credit~if that is all they have. If the Runner's credit pool is empty, the effect does nothing.}
-		      \item If a player is instructed to SPEND or PAY credits, that player must put the specified	number of credits back into the bank. The credits spent can come from the credit pool or from a card that player controls with an ability allowing credits on it to be spent for the type of ability being resolved.\\[10pt]
+		      \item If a player is instructed to SPEND or PAY credits, that player must put the specified	number of credits back into the bank. The credits spent can come from the credit pool or from a card that player controls with an ability allowing credits on it to be spent for the type of ability being resolved. \textcolor{Bittersweet}{The terms ``spend'' and ``pay'' are synonymous.}\\[10pt]
 		            \example[1]{The Runner may use the credit from \card{Cyberfeeder} to pay for Atman's first ability.}\\[10pt]
 		            \example[2]{The Runner may use credits from Ghost Runner when secretly spending credits to resolve a Psi ability (such as The Future Perfect).}\\[10pt]
 		            \example[3]{The Runner must use credits from \card{Ghost Runner} if this is the only way for them to pay 3\credit when resolving the ``when encountered'' ability on \card{Tollbooth}.}
 	      \end{enumerate}
-	\item Abilities can place credits on cards. Credits on a player's card are not in that player's credit pool; the player can only interact with those credits as instructed by card abilities.
+	\item Abilities can place credits on cards \textcolor{Bittersweet}{as discussed in section 1.12}. Credits on a player's card are not in that player's credit pool; the player can only interact with those credits as instructed by card abilities.
 	      \begin{enumerate}
 		      \item If a player is instructed to TAKE credits from a card, they remove that many credits from that card and gain those credits.
 		      \item If an ability specifies how a player is allowed to spend credits from a card, they can be spent from that card as if they were in the player's credit pool for the specified actions or abilities.
 		      \item If an ability specifies a time period during which a player is allowed to spend credits from a card, they can be spent from that card as if they were in the player's credit pool for any purpose (other than losing credits) as long as the specified time period is active or the specified duration has not expired.
-		      \item Spending credits from a card is considered ``using'' the card from which the credits are spent.
+		      \item Spending credits from a card is considered ``using'' the card \textcolor{Bittersweet}{that allowed those credits to be spent. See section 9.1.6}.
 	      \end{enumerate}
 	\item \additemtotoc{Recurring Credits}
 	      \begin{enumerate}
 		      \item RECURRING CREDITS (\recurring) place credits on a card repeatedly. The text ``N\recurring'' means ``Before this card becomes active or your turn begins, if there are fewer than N credits on it, place credits on this card until there are N credits on it.''
 		      \item Recurring credits do not accumulate. They are refilled only up to the indicated number.
-		      \item Recurring credits are refilled during \hyperlink{page.i}{step 5.6.1c} of the Corp's turn and \hyperlink{page.i}{step 5.7.1c} of the Runner's turn, before other abilities that trigger at the start of the turn resolve.\\[10pt]
+		      \item Recurring credits are refilled during \hyperlink{page.i}{step 5.6.1c} of the Corp's turn and \hyperlink{page.i}{step 5.7.1c} of the Runner's turn, before other abilities that \textcolor{Bittersweet}{apply} at the start of the turn resolve.\\[10pt]
 		            \example{The Runner installs Spinal Modem, which has 2\recurring. 2 credits are placed on Spinal Modem now. The Runner spends 1 of those credits later in their turn. At the beginning of the Runner's next turn, the credits on Spinal Modem should be replenished up to 2\credit, so one more credit is placed on it.}
 	      \end{enumerate}
 \end{enumerate}
